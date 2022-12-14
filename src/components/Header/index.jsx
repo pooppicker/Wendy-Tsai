@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 import "./styles.scss";
 import { Button, Menu, Col, Row } from "antd";
@@ -7,55 +7,77 @@ import { CloseOutlined } from "@ant-design/icons";
 import { CSSTransition } from "react-transition-group";
 const Header = () => {
   const [isOpen, setIsOpen] = useState();
-
-  function getItem(label, key, children) {
-    return {
-      key,
-      children,
-      label,
-    };
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  function getWindowSize() {
+    const { innerWidth } = window;
+    return { innerWidth };
   }
 
+  function navItems() {
+    return (
+      <>
+        <ul>
+          <li>
+            <a href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#projects">PROJECTS</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </>
+    );
+  }
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
-    <>
+    <div className={styles.header}>
       <div className={`${styles.container} nav-bar`}>
         <div className={styles.logoGroup}>
           <img className={styles.selfPhoto} src="/images/avatar.jpg"></img>
           <span>WENDY TSAI</span>
         </div>
         <div className={styles.menu}>
-          <Button onClick={toggleCollapse} type="text">
-            {isOpen ? (
-              <CloseOutlined style={{ fontSize: "15px" }} />
-            ) : (
-              <MenuIcon></MenuIcon>
-            )}
-          </Button>
+          {windowSize.innerWidth >= 600 ? (
+            ""
+          ) : (
+            <Button onClick={toggleCollapse} type="text">
+              {isOpen ? (
+                <CloseOutlined style={{ fontSize: "20px" }} />
+              ) : (
+                <MenuIcon></MenuIcon>
+              )}
+            </Button>
+          )}
         </div>
       </div>
-      <div className={styles.menuList}>
-        <CSSTransition in={isOpen} classNames="dropdown" unmountOnExit>
-          <ul>
-            <li>
-              <a href="#home">HOME</a>
-            </li>
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#projects">PROJECTS</a>
-            </li>
-            <li>
-              <a href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </CSSTransition>
-      </div>
-    </>
+      {windowSize.innerWidth >= 600 ? (
+        <div className={styles.menuListWebView}>{navItems()}</div>
+      ) : (
+        <div className={styles.menuList}>
+          <CSSTransition in={isOpen} classNames="dropdown" unmountOnExit>
+            {navItems}
+          </CSSTransition>
+        </div>
+      )}
+    </div>
   );
 };
 
