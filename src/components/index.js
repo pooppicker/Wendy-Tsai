@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import About from './About';
+import Intro from './Intro';
+import PrimaryButton from './PrimaryButton';
 
-export { Header, Footer, About };
+export { Header, Footer, Intro, PrimaryButton };

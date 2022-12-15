@@ -1,10 +1,10 @@
 import React from "react";
-import { Header, Footer, About } from "../../components";
+import { Header, Footer, Intro } from "../../components";
 const Home = () => {
   return (
     <>
       <Header></Header>
-      <About />
+      <Intro />
       {/* <Footer></Footer> */}
     </>
   );

@@ -72,7 +72,7 @@ const Header = () => {
         <div className={styles.menuListWebView}>{navItems()}</div>
       ) : (
         <div className={styles.menuList}>
-          <CSSTransition in={isOpen} classNames="dropdown" unmountOnExit>
+          <CSSTransition in={isOpen} classNames="dropdown" timeout={200} unmountOnExit>
             {navItems}
           </CSSTransition>
         </div>

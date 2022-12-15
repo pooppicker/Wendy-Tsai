@@ -1,0 +1,33 @@
+.intro {
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("./background/common-bg.svg");
+  background-position: center;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+  .contentWrapper {
+    z-index: 99;
+    padding: 19rem 0 13rem 0;
+    margin: 0 2rem;
+    .title {
+      font-size: 4.5rem;
+      letter-spacing: 3px;
+      font-weight: 800;
+    }
+    .subTitle {
+      margin-bottom: 5rem;
+      .subTitleText {
+        color: #333;
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.6;
+      }
+    }
+  }
+}
