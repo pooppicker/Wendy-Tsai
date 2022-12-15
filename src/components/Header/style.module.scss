@@ -13,15 +13,23 @@
     .logoGroup {
       display: flex;
       align-items: center;
-      font-weight: 700;
-      font-size: 1.8rem;
+      cursor: pointer;
+      &:hover {
+        color: #facf0f;
+        transition-duration: 0.2s;
+      }
       .selfPhoto {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         object-fit: cover;
         object-position: top;
-        margin-right: 1rem;
+        margin-right: 1.2rem;
+      }
+      span {
+        font-weight: 700;
+        font-size: 1.9rem;
+        letter-spacing: 1px;
       }
     }
   }

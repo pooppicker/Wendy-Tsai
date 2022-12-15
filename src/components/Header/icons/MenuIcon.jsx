@@ -1,4 +1,4 @@
-const MenuIcon = ({ size = "25", }) => {
+const MenuIcon = ({ size = "30px", }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

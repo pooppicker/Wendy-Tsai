@@ -11,8 +11,8 @@ const Intro = () => {
           <h2 className={styles.title}>HEY, I'M WENDY TSAI</h2>
           <div className={styles.subTitle}>
             <p className={styles.subTitleText}>
-              A Frontend Developer building the Fronted of Websites and Web
-              Applications with Vue.js & React.js
+              A Frontend Developer building the Frontend of Websites and Web
+              Applications with Vue and React
             </p>
           </div>
           <Button

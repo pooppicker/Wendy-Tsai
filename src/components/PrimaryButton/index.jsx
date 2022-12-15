@@ -15,6 +15,7 @@ const PrimaryButton = ({ height, onClick, text, width }) => {
         boxShadow: "0 5px 15px 0 rgb(0 0 0 / 15%)",
         transition: "width 3px",
         borderRadius: "5px",
+        fontSize: "2rem",
         fontWeight: 700,
         letterSpacing: "1px",
         cursor: "pointer",

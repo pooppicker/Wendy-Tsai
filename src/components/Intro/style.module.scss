@@ -34,7 +34,17 @@
   .intro {
     height: 100vh;
     min-height: 80rem;
-    transform: translate(0,0);
+    transform: translate(0, 0);
+    .contentWrapper {
+      .title {
+        font-size: 6rem;
+      }
+      .subTitle {
+        .subTitleText {
+          font-size: 2.2rem;
+        }
+      }
+    }
     .scrollAnimation {
       position: absolute;
       left: 50%;

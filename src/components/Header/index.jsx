@@ -60,7 +60,7 @@ const Header = () => {
           ) : (
             <Button onClick={toggleCollapse} type="text">
               {isOpen ? (
-                <CloseOutlined style={{ fontSize: "20px" }} />
+                <CloseOutlined style={{ fontSize: "24px" }} />
               ) : (
                 <MenuIcon></MenuIcon>
               )}
