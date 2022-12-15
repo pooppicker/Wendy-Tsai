@@ -24,6 +24,9 @@ const Intro = () => {
             }}
           />
         </div>
+        <div className={styles.scrollAnimation}>
+          <div className={styles.mouse}></div>
+        </div>
       </section>
     </>
   );

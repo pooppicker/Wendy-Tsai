@@ -6,8 +6,6 @@
     ),
     url("./background/common-bg.svg");
   background-position: center;
-  height: 100vh;
-  min-height: 80rem;
   max-height: 120rem;
   position: relative;
   .contentWrapper {
@@ -29,5 +27,47 @@
         line-height: 1.6;
       }
     }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .intro {
+    height: 100vh;
+    min-height: 80rem;
+    transform: translate(0,0);
+    .scrollAnimation {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      bottom: 2rem;
+      .mouse {
+        position: relative;
+        width: 25px;
+        height: 40px;
+        border: 2px solid #333;
+        border-radius: 60px;
+        overflow: hidden;
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          top: 7px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #333;
+          border-radius: 50%;
+          opacity: 1;
+          animation: wheel 1.3s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
   }
 }
