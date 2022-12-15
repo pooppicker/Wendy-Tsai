@@ -19,8 +19,9 @@ const Intro = () => {
             text="projects"
             width="200px"
             height="50px"
-            onClick={() => {
-              navigate("#projects");
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#projects";
             }}
           />
         </div>

@@ -50,7 +50,13 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={`${styles.container} nav-bar`}>
-        <div className={styles.logoGroup}>
+        <div
+          className={styles.logoGroup}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "#home";
+          }}
+        >
           <img className={styles.selfPhoto} src="/images/avatar.jpg"></img>
           <span>WENDY TSAI</span>
         </div>
@@ -72,7 +78,12 @@ const Header = () => {
         <div className={styles.menuListWebView}>{navItems()}</div>
       ) : (
         <div className={styles.menuList}>
-          <CSSTransition in={isOpen} classNames="dropdown" timeout={200} unmountOnExit>
+          <CSSTransition
+            in={isOpen}
+            classNames="dropdown"
+            timeout={200}
+            unmountOnExit
+          >
             {navItems}
           </CSSTransition>
         </div>
