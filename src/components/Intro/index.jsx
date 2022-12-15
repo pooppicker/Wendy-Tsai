@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./style.module.scss";
 import Button from "../PrimaryButton";
 const Intro = () => {
-  const navigate = useNavigate;
   return (
     <>
       <section id="home" className={styles.intro}>
