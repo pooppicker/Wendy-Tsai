@@ -40,7 +40,7 @@ const About = () => {
   return (
     <>
       <section id="about" className={styles.about}>
-        <div className={styles.mainConainer}>
+        <div className={styles.mainContainer}>
           <h2 className={styles.heading}>
             <span className={styles.headingMain}>About Me</span>
             <span className={styles.headingSub}>
@@ -52,13 +52,13 @@ const About = () => {
             <div className={styles.aboutContentMain}>
               <h3 className={styles.aboutContentTitle}>Get to know me!</h3>
               <div className={styles.aboutContentDetail}>
-                <p>
+                <p className={styles.aboutContentDetailText}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Laborum, odio! Consectetur ducimus doloribus ab perspiciatis
                   tempore quidem beatae! Laboriosam, beatae eius harum eum quae
                   cupiditate quas. Laborum sapiente unde aliquam!
                 </p>
-                <p>
+                <p className={styles.aboutContentDetailText}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Laborum, odio! Consectetur ducimus doloribus ab perspiciatis
                   tempore quidem beatae! Laboriosam, beatae eius harum eum quae

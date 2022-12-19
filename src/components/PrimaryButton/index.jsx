@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Button } from "antd";
+import styles from "./style.module.scss"
 const PrimaryButton = ({ height, onClick, text, width, size }) => {
   return (
     <Button
+      className={styles.mainButton}
       onClick={onClick}
       type="primary"
       style={{
@@ -19,7 +21,7 @@ const PrimaryButton = ({ height, onClick, text, width, size }) => {
         fontWeight: 700,
         letterSpacing: "1px",
         cursor: "pointer",
-        alignItems: "center"
+        alignItems: "center",
         // padding: "1.5rem 5rem"
       }}
     >

@@ -1,0 +1,103 @@
+.about {
+  background: #fafafa;
+  padding: 8rem 0;
+  .mainContainer {
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
+    .heading {
+      margin-bottom: 8rem;
+      .headingMain {
+        display: block;
+        text-transform: uppercase;
+        font-size: 4rem;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 3.5rem;
+        position: relative;
+        color: #111;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          width: 3rem;
+          background: #facf0f;
+          left: 50%;
+          top: calc(100% + 1.2rem);
+          transform: translateX(-50%);
+          border-radius: 5px;
+        }
+      }
+      .headingSub {
+        font-size: 1.8rem;
+        display: block;
+        text-align: center;
+        color: #555;
+        font-weight: 500;
+        max-width: 80rem;
+        margin: auto;
+        line-height: 1.6;
+      }
+    }
+    .aboutContent {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 8rem;
+      .aboutContentTitle {
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+      }
+      .aboutContentMain {
+        text-align: left;
+        .aboutContentDetail {
+          .aboutContentDetailText {
+            font-size: 1.8rem;
+            color: #666;
+            max-width: 60rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            &:last-child {
+              margin-bottom: 4rem;
+            }
+          }
+        }
+      }
+      .aboutContentSkills {
+        text-align-last: left;
+        .skills {
+          display: flex;
+          flex-wrap: wrap;
+          .skillsSkill {
+            padding: 1rem 2rem;
+            margin-bottom: 1.5rem;
+            margin-right: 1.5em;
+            font-size: 1.6em;
+            background: rgba(153, 153, 153, 0.2);
+            border-radius: 5px;
+            font-weight: 600;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .about {
+    padding: 10rem 0;
+    .mainContainer {
+      .heading {
+        .headingSub {
+          font-size: 2rem;
+        }
+      }
+      .aboutContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+      }
+    }
+  }
+}

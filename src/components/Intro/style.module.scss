@@ -34,12 +34,19 @@
   .intro {
     height: 100vh;
     min-height: 80rem;
-    transform: translate(0, 0);
     .contentWrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90rem;
+      width: 92%;
       .title {
         font-size: 6rem;
+        font-weight: 800px;
       }
       .subTitle {
+        margin: 3rem auto 5rem auto;
         .subTitleText {
           font-size: 2.2rem;
         }
