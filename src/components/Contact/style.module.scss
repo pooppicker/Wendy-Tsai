@@ -57,11 +57,14 @@
       border-radius: 5px;
       margin: 5rem auto 0 auto;
       .boxContent {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 1px;
         line-height: 1.7;
+        color: #555;
+        font-weight: 600;
         .boxContentTextLabel {
           font-weight: 700;
+          color: #111;
         }
       }
     }
