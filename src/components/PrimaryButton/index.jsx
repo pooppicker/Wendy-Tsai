@@ -8,7 +8,7 @@ const PrimaryButton = ({ height, onClick, text, width, size }) => {
       onClick={onClick}
       type="primary"
       style={{
-        zIndex: 999,
+        zIndex: 99,
         background: "#facf0f",
         color: "#333",
         width: `${width}`,

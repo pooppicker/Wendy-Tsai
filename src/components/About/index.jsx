@@ -72,7 +72,7 @@ const About = () => {
                 size="1.6rem"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href("#contact");
+                  window.location.href = "#contact";
                 }}
               />
             </div>
