@@ -5,5 +5,6 @@ import PrimaryButton from './PrimaryButton';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import ProjectModal from './ProjectModal';
 
-export { Header, Footer, Intro, PrimaryButton, About, Projects, Contact };
+export { Header, Footer, Intro, PrimaryButton, About, Projects, Contact, ProjectModal };

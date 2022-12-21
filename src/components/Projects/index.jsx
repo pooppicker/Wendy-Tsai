@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Button from "../PrimaryButton";
+import ProjectModal from "../ProjectModal";
 const Projects = () => {
+  const [openMetaModal, setOpenMetaModal] = useState(false);
+  const [openOtherModal, setOpenOtherModal] = useState(false);
+  const [openBackstageModal, setOpenBackstageModal] = useState(false);
+  const [selectedModal, setSelectedModal] = useState("");
+
+  console.log("ooo",selectedModal);
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.mainContainer}>
@@ -33,7 +40,8 @@ const Projects = () => {
                 size="1.6rem"
                 text="view more"
                 onClick={() => {
-                  window.open("/project-1", "_blank");
+                  setOpenMetaModal(true);
+                  setSelectedModal("meta");
                 }}
               />
             </div>
@@ -57,7 +65,8 @@ const Projects = () => {
                 size="1.6rem"
                 text="view more"
                 onClick={() => {
-                  window.open("/project-2", "_blank");
+                  setOpenOtherModal(true);
+                  setSelectedModal("other");
                 }}
               />
             </div>
@@ -81,13 +90,31 @@ const Projects = () => {
                 size="1.6rem"
                 text="view more"
                 onClick={() => {
-                  window.open("/project-3", "_blank");
+                  setOpenBackstageModal(true);
+                  setSelectedModal("backStage");
                 }}
               />
             </div>
           </div>
         </div>
       </div>
+      <ProjectModal
+        open={
+          openMetaModal
+            ? openMetaModal
+            : openOtherModal
+            ? openOtherModal
+            : openBackstageModal
+            ? openBackstageModal
+            : ""
+        }
+        onClose={() => {
+          setOpenMetaModal(false);
+          setOpenOtherModal(false);
+          setOpenBackstageModal(false);
+        }}
+        selectedModal={selectedModal}
+      />
     </section>
   );
 };
