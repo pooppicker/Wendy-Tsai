@@ -68,9 +68,6 @@ export const imageSrc = {
       src: "/images/backStage/backstage3.png",
     },
     {
-      src: "/images/backStage/backstage4.png",
-    },
-    {
       src: "/images/backStage/backstage5.png",
     },
     {
