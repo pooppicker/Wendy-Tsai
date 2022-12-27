@@ -7,8 +7,6 @@ const Projects = () => {
   const [openOtherModal, setOpenOtherModal] = useState(false);
   const [openBackstageModal, setOpenBackstageModal] = useState(false);
   const [selectedModal, setSelectedModal] = useState("");
-
-  console.log("ooo",selectedModal);
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.mainContainer}>
@@ -99,6 +97,7 @@ const Projects = () => {
         </div>
       </div>
       <ProjectModal
+        title="Scroll to view whole image"
         open={
           openMetaModal
             ? openMetaModal
@@ -106,7 +105,7 @@ const Projects = () => {
             ? openOtherModal
             : openBackstageModal
             ? openBackstageModal
-            : ""
+            : false
         }
         onClose={() => {
           setOpenMetaModal(false);

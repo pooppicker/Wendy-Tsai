@@ -1,32 +1,33 @@
 import React, { useState } from "react";
 import { Button, Modal, Carousel } from "antd";
-import mockdata from "./mock";
+import { imageSrc } from "./mock";
+import styles from "./style.module.scss";
+import "./style.scss"
 const ProjectModal = ({ open, onClose, title, selectedModal }) => {
-  console.log(selectedModal);
   return (
-    <Modal title={title} centered open={open} onCancel={onClose}>
-      <Carousel autoplay>
+    <Modal title={title} centered open={open} onCancel={onClose} footer="" className="modal-carousel" >
+      <Carousel autoplay >
         {selectedModal === "meta"
-          ? mockdata.imageSrc.meta.map((i) => {
+          ? imageSrc?.meta?.map((i, index) => {
               return (
-                <div>
-                  <img src={i.src} alt="meta" />
+                <div key={"carousel" + index} className={styles.imgWrapper}>
+                  <img className={styles.modalImg} src={i.src} alt="meta" />
                 </div>
               );
             })
           : selectedModal === "other"
-          ? mockdata.imageSrc.other.map((i) => {
+          ? imageSrc?.other.map((i, index) => {
               return (
-                <div>
-                  <img src={i.src} alt="other" />
+                <div key={"carousel" + index} className={styles.imgWrapper}>
+                  <img className={styles.modalImg} src={i.src} alt="other" />
                 </div>
               );
             })
           : ""}
         {selectedModal === "backStage"
-          ? mockdata.imageSrc.backstage.map((i) => {
+          ? imageSrc?.backstage.map((i, index) => {
               return (
-                <div>
+                <div key={"carousel" + index}>
                   <img src={i.src} alt="backstage" />
                 </div>
               );
