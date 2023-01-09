@@ -33,9 +33,10 @@ const Header = () => {
       </>
     );
   }
-  const toggleCollapse = () => {
+
+  function toggleCollapse() {
     setIsOpen(!isOpen);
-  };
+  }
 
   useEffect(() => {
     function handleWindowResize() {
@@ -46,6 +47,10 @@ const Header = () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
 
   return (
     <div className={styles.header}>
@@ -64,13 +69,13 @@ const Header = () => {
           {windowSize.innerWidth >= 600 ? (
             ""
           ) : (
-            <Button onClick={toggleCollapse} type="text">
-              {isOpen ? (
-                <CloseOutlined style={{ fontSize: "24px" }} />
-              ) : (
-                <MenuIcon></MenuIcon>
-              )}
-            </Button>
+              <Button onClick={toggleCollapse} type="text">
+                {isOpen ? (
+                  <CloseOutlined style={{ fontSize: "24px" }} />
+                ) : (
+                  <MenuIcon></MenuIcon>
+                )}
+              </Button>
           )}
         </div>
       </div>

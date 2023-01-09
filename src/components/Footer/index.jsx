@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.mainContainer}>
+        <Link className={styles.lang}>
+          <div>English</div>
+          <div>｜繁體中文</div>
+        </Link>
         <div className={styles.mainFooterUpper}>
           <div className={styles.mainFooterRow1}>
             <h2 className={styles.heading}>Social</h2>
