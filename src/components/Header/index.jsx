@@ -5,7 +5,10 @@ import { Button, Menu, Col, Row } from "antd";
 import MenuIcon from "./icons/MenuIcon";
 import { CloseOutlined } from "@ant-design/icons";
 import { CSSTransition } from "react-transition-group";
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   function getWindowSize() {
@@ -18,16 +21,16 @@ const Header = () => {
       <>
         <ul>
           <li>
-            <a href="#home">HOME</a>
+            <a href="#home">{t("nav.home")}</a>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            <a href="#about">{t("nav.about")}</a>
           </li>
           <li>
-            <a href="#projects">PROJECTS</a>
+            <a href="#projects">{t("nav.projects")}</a>
           </li>
           <li>
-            <a href="#contact">CONTACT</a>
+            <a href="#contact">{t("nav.contact")}</a>
           </li>
         </ul>
       </>
@@ -69,13 +72,13 @@ const Header = () => {
           {windowSize.innerWidth >= 600 ? (
             ""
           ) : (
-              <Button onClick={toggleCollapse} type="text">
-                {isOpen ? (
-                  <CloseOutlined style={{ fontSize: "24px" }} />
-                ) : (
-                  <MenuIcon></MenuIcon>
-                )}
-              </Button>
+            <Button onClick={toggleCollapse} type="text">
+              {isOpen ? (
+                <CloseOutlined style={{ fontSize: "24px" }} />
+              ) : (
+                <MenuIcon></MenuIcon>
+              )}
+            </Button>
           )}
         </div>
       </div>

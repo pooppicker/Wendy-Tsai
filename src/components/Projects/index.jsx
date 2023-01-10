@@ -36,7 +36,7 @@ const Projects = () => {
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text="view more"
+                text={t('button.viewMore')}
                 onClick={() => {
                   setOpenMetaModal(true);
                   setSelectedModal("meta");
@@ -53,15 +53,15 @@ const Projects = () => {
               />
             </div>
             <div className={styles.projectsRowContent}>
-              <h3 className={styles.projectsRowContentTitle}>Other Games</h3>
+              <h3 className={styles.projectsRowContentTitle}>{t('projects.otherGames')}</h3>
               <p className={styles.projectsRowContentDesc}>
-                There are multiple games in Game Center
+                {t('projects.otherGamesDesc')}
               </p>
               <Button
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text="view more"
+                text={t('button.viewMore')}
                 onClick={() => {
                   setOpenOtherModal(true);
                   setSelectedModal("other");
@@ -78,7 +78,7 @@ const Projects = () => {
               />
             </div>
             <div className={styles.projectsRowContent}>
-              <h3 className={styles.projectsRowContentTitle}>Backstage</h3>
+              <h3 className={styles.projectsRowContentTitle}>{t('projects.backstage')}</h3>
               <p className={styles.projectsRowContentDesc}>
                 {t("projects.backstageDesc")}
               </p>
@@ -86,7 +86,7 @@ const Projects = () => {
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text="view more"
+                text={t('button.viewMore')}
                 onClick={() => {
                   setOpenBackstageModal(true);
                   setSelectedModal("backStage");
@@ -97,7 +97,7 @@ const Projects = () => {
         </div>
       </div>
       <ProjectModal
-        title="Scroll to view whole image"
+        title={t('modal.scroll')}
         open={
           openMetaModal
             ? openMetaModal

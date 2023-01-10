@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.mainContainer}>
         <h2 className={styles.heading}>
-          <span className={styles.headingMain}>Contact</span>
-          <span className={styles.headingSub}>
-            Feel free to contact me by calling or via email and I will get back
-            to you as soon as possible
-          </span>
+          <span className={styles.headingMain}>{t("nav.contact")}</span>
+          <span className={styles.headingSub}>{t("contact.subTitle")}</span>
         </h2>
         <div className={styles.contactBoxContainer}>
           <div className={styles.boxContent}>

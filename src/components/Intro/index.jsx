@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Button from "../PrimaryButton";
+import { useTranslation } from "react-i18next";
 const Intro = () => {
+  const { t } = useTranslation();
   return (
     <>
       <section id="home" className={styles.intro}>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.title}>HEY, I'M WENDY TSAI</h2>
+          <h2 className={styles.title}>{t("intro.title")}</h2>
           <div className={styles.subTitle}>
-            <p className={styles.subTitleText}>
-              A Frontend Developer building the Frontend of Websites and Web
-              Applications with Vue and React
-            </p>
+            <p className={styles.subTitleText}>{t("intro.subTitle")}</p>
           </div>
           <Button
-            text="projects"
+            text={t("nav.projects")}
             width="200px"
             height="50px"
             onClick={(e) => {

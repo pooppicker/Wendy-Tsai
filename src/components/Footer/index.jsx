@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
 import i18n from "../../plugin/i18n";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -58,10 +60,7 @@ const Footer = () => {
           </div>
           <div className={styles.mainFooterRow2}>
             <h2 className={styles.heading}>Wendy Tsai</h2>
-            <p className={styles.footerShortDesc}>
-              A Frontend Developer building the Frontend of Websites and Web
-              Applications with Vue and React
-            </p>
+            <p className={styles.footerShortDesc}>{t("intro.subTitle")}</p>
           </div>
         </div>
         <div className={styles.mainFooterLower}>
