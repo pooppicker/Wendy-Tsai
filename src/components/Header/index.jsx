@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState();
+  const [isSelected, setIsSelected] = useState();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   function getWindowSize() {
     const { innerWidth } = window;
@@ -19,7 +20,11 @@ const Header = () => {
   function navItems() {
     return (
       <>
-        <ul>
+        <ul
+          onClick={() => {
+            setIsOpen(false);
+          }}
+        >
           <li>
             <a href="#home">{t("nav.home")}</a>
           </li>
