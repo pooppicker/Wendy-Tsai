@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
-import { Link } from "react-router-dom";
+import "./styles.scss";
+import { Tabs } from "antd";
 import i18n from "../../plugin/i18n";
 import { useTranslation } from "react-i18next";
 
@@ -8,27 +9,34 @@ const Footer = () => {
   const { t } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    // window.localStorage.setItem("lang", lng);
   };
+
+  const onChange = (key) => {
+    console.log(key);
+    changeLanguage(key);
+    window.location.href = "#";
+  };
+  const langItems = [
+    {
+      key: "en",
+      label: "English",
+    },
+    {
+      key: "ch",
+      label: "繁體中文",
+    },
+  ];
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} footer`}>
       <div className={styles.mainContainer}>
         <div className={styles.lang}>
-          <div
-            onClick={() => {
-              changeLanguage("en");
-              window.location.href = "#";
-            }}
-          >
-            English
-          </div>
-          <div
-            onClick={() => {
-              changeLanguage("ch");
-              window.location.href = "#";
-            }}
-          >
-            ｜繁體中文
-          </div>
+          <Tabs
+            centered
+            defaultActiveKey={"en"}
+            items={langItems}
+            onChange={onChange}
+          />
         </div>
         <div className={styles.mainFooterUpper}>
           <div className={styles.mainFooterRow1}>
