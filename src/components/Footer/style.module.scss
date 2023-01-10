@@ -8,6 +8,8 @@
     width: 92%;
     position: relative;
     .lang {
+      z-index: 99;
+      cursor: pointer;
       margin: 2rem;
       display: flex;
       position: absolute;

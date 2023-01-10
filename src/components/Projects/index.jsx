@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Button from "../PrimaryButton";
 import ProjectModal from "../ProjectModal";
+import { useTranslation } from "react-i18next";
 const Projects = () => {
+  const { t } = useTranslation();
   const [openMetaModal, setOpenMetaModal] = useState(false);
   const [openOtherModal, setOpenOtherModal] = useState(false);
   const [openBackstageModal, setOpenBackstageModal] = useState(false);
@@ -11,11 +13,8 @@ const Projects = () => {
     <section id="projects" className={styles.projects}>
       <div className={styles.mainContainer}>
         <h2 className={styles.heading}>
-          <span className={styles.headingMain}>Projects</span>
-          <span className={styles.headingSub}>
-            Here you will find some personal and clients project that I
-            participate in and feel free to view more about the detail
-          </span>
+          <span className={styles.headingMain}>{t("nav.projects")}</span>
+          <span className={styles.headingSub}>{t("projects.subTitle")}</span>
         </h2>
         <div className={styles.projectsContent}>
           <div className={styles.projectsRow}>
@@ -27,10 +26,11 @@ const Projects = () => {
               />
             </div>
             <div className={styles.projectsRowContent}>
-              <h3 className={styles.projectsRowContentTitle}>Game Center</h3>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.gameCenter")}
+              </h3>
               <p className={styles.projectsRowContentDesc}>
-                It is a platform where you can select different kind of games to
-                bet
+                {t("projects.gameCenterDesc")}
               </p>
               <Button
                 width="150px"
@@ -80,7 +80,7 @@ const Projects = () => {
             <div className={styles.projectsRowContent}>
               <h3 className={styles.projectsRowContentTitle}>Backstage</h3>
               <p className={styles.projectsRowContentDesc}>
-                Each games have individual backstage
+                {t("projects.backstageDesc")}
               </p>
               <Button
                 width="150px"

@@ -1,14 +1,33 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import i18n from "../../plugin/i18n";
+
 const Footer = () => {
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.mainContainer}>
-        <Link className={styles.lang}>
-          <div>English</div>
-          <div>｜繁體中文</div>
-        </Link>
+        <div className={styles.lang}>
+          <div
+            onClick={() => {
+              changeLanguage("en");
+              window.location.href = "#";
+            }}
+          >
+            English
+          </div>
+          <div
+            onClick={() => {
+              changeLanguage("ch");
+              window.location.href = "#";
+            }}
+          >
+            ｜繁體中文
+          </div>
+        </div>
         <div className={styles.mainFooterUpper}>
           <div className={styles.mainFooterRow1}>
             <h2 className={styles.heading}>Social</h2>

@@ -1,0 +1,23 @@
+{
+  "nav.home": "home",
+  "nav.about": "about",
+  "nav.projects": "projects",
+  "nav.contact": "contact",
+  "intro.title": "HEY, I'M WENDY TSAI",
+  "intro.subTitle": "A Frontend Developer building the Frontend of Websites and Web Applications with Vue and React",
+  "about.title": "about me",
+  "about.subTitle": "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology",
+  "about.contentTitle": "Get to know me!",
+  "about.content1": "I'm a Frontend Web Developer who loves programming and has proficiency in Chinese, English, and Thai.I have a wide range of interests and enjoy trying new things. I have learned video editing, Illustrator, Photoshop, and several musical instruments by myself. I have always been passionate about art, and to me, programming is a form of artistic expression. That's why I enrolled in an online full-stack course and discovered my love for programming, which led me to transition to a career as a front-end engineer.",
+  "about.content2": "I am a self-taught and have gained experience with the React.js framework through project development at my previous company. I am also skilled at working across departments and understand how to communicate and coordinate effectively to produce high-quality work for the company.I believe that an excellent engineer should have a spirit of continuous learning and be able to apply what they have learned in practice, as well as have good observation skills in order to create user-friendly products. I believe I have these qualities and am confident that I can be a valuable asset to your company.",
+  "skills.title": "My Skills",
+  "projects.subTitle": "Here you will find some personal and clients project that I participate in and feel free to view more about the detail",
+  "projects.gameCenter": "Game Center",
+  "projects.otherGames": "Other Games",
+  "projects.backstage": "Backstage",
+  "projects.gameCenterDesc": "It is a platform where you can select different kind of games to bet",
+  "projects.otherGamesDesc": "There are multiple games in Game Center",
+  "projects.backstageDesc": "Each games have individual backstage",
+  "button.viewMore": "view more",
+  "contact.subTitle": "Feel free to contact me by calling or via email and I will get back to you as soon as possible"
+}
