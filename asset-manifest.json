@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wendy-tsai/static/css/main.a6353ffe.css",
+    "main.js": "/wendy-tsai/static/js/main.36d764bc.js",
+    "static/js/787.376020e4.chunk.js": "/wendy-tsai/static/js/787.376020e4.chunk.js",
+    "static/media/common-bg.svg": "/wendy-tsai/static/media/common-bg.9878fdbb0d963009b072.svg",
+    "index.html": "/wendy-tsai/index.html",
+    "main.a6353ffe.css.map": "/wendy-tsai/static/css/main.a6353ffe.css.map",
+    "main.36d764bc.js.map": "/wendy-tsai/static/js/main.36d764bc.js.map",
+    "787.376020e4.chunk.js.map": "/wendy-tsai/static/js/787.376020e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6353ffe.css",
+    "static/js/main.36d764bc.js"
+  ]
+}
