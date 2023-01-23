@@ -34,9 +34,6 @@ const Footer = () => {
           <Tabs
             centered
             defaultActiveKey={"en"}
-            tabBarStyle={{
-              border: "none",
-            }}
             items={langItems}
             onChange={onChange}
           />
