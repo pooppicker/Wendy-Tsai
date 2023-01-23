@@ -70,7 +70,7 @@ const Header = () => {
             window.location.href = "#home";
           }}
         >
-          <img className={styles.selfPhoto} src="/images/avatar.jpg"></img>
+          <img className={styles.selfPhoto} src="https://lh3.googleusercontent.com/9j1T04UYSrCJu7joGoYIuSBLBYP4aXRQVi-Xe4dwuWDufUR7fTVPb9_1dE3ycm3RH4JWwtw2EBp6RBhgpYZDJXGwcsEQ2eq0NIihVy24oybWNB5fOGs389q1_fnQmTvaRiPujGkTFsT99cC84knpbONARk2PqHg0up2IquhAlVSgHYDttu_40tn7EiwCIHRiVXTcPVroXnG4ObpxcZOuWtvCQTx9x4aYsXdh_jR5ziGT72FUmTPje2W9OBjZK9nytnZ-notoSS74uGQvKzH0WmxZzcXv_Gd4rawP-h4mPuadwzA4JYFnG9jtMacOAkYQCi4a4IrAVcUe59uOC2U-eV6dLd64dkvZDI_MVatmFFSM5Hz_awSMfLJ1tSPZzf0bY6P9_rKl-oeOSQIhod7ZpOx5AxQP5HrtgfI-eT3AYAsdXGD2-YtD3_wWpRNUwOYYibzHwQBq2B4zhP2Y8OQ54P2MlVXRxOUvtUzIGaDgYDw7_DiNsW2WNUwztxAoo_3ciyJM9tDfRQQypL8G6V3vkB3SW0eUBRrg37LGHyABVcWUjlk0rV1BhJ6JGdhTIziTiGO4rdv04YVk7vrNkzbp9RvgMUwg1a4zuv4Fg9wtmU_X-1UllJ7uW0YLUVGmckDaubaA58LOgZsVZSjth51t6Iw7_8PGldLkTqR0xzBBBcwdW1cZQV_im5f2j1va5h80xfeioe-R0iqWJCVFAHg6nxTqF_i6FBZFUTLG5LD8M39nVFEhKLEktirK6ZSnG1SfPBhUyL_YDPvJe9fqLCPMBltnd1D_cUGuK2hJC4FtZAg_L7QAS5du3T4pS3brIQ6LsXOf-p1ujBLG9e4BaTadX59dDEXWV6GY3Nv2lNEsLQZsLryssqv4oYHZyHVzTEP0Y72e-ryb7Lp2XzjHCvZMZ4qfW-Jn-apFEk7yzAZ7_GL5dtXWDUp5GTckb4e3-1MEguC72IzCZ7bBkmgbHUg=w1040-h1528-no?authuser=0"></img>
           <span>WENDY TSAI</span>
         </div>
         <div className={styles.menu}>
