@@ -2,10 +2,6 @@
   .ant-tabs-nav-list {
     color: #fff;
     padding-top: 2rem;
-    .ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
-      width: 0;
-      height: 0;
-    }
   }
   .ant-tabs .ant-tabs-tab {
     font-weight: 400;
@@ -24,6 +20,10 @@
   }
   .ant-tabs .ant-tabs-tab:hover {
     color: #facf0f;
+  }
+  .ant-tabs .ant-tabs-ink-bar {
+    width: 0;
+    height: 0;
   }
   .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: #facf0f;
