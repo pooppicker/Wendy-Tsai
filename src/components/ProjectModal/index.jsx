@@ -19,7 +19,7 @@ const ProjectModal = ({ open, onClose, title, selectedModal }) => {
           ? imageSrc?.meta?.map((i, index) => {
               return (
                 <div key={"carousel" + index} className={styles.imgWrapper}>
-                  <img className={styles.modalImg} src={i.src} alt="meta" />
+                  <img className={styles.modalImg} src={process.env.PUBLIC_URL + i.src} alt="meta" />
                 </div>
               );
             })
@@ -27,7 +27,7 @@ const ProjectModal = ({ open, onClose, title, selectedModal }) => {
           ? imageSrc?.other.map((i, index) => {
               return (
                 <div key={"carousel" + index} className={styles.imgWrapper}>
-                  <img className={styles.modalImg} src={i.src} alt="other" />
+                  <img className={styles.modalImg} src={process.env.PUBLIC_URL + i.src} alt="other" />
                 </div>
               );
             })
@@ -41,7 +41,7 @@ const ProjectModal = ({ open, onClose, title, selectedModal }) => {
                 >
                   <img
                     className={styles.modalImgDesktop}
-                    src={i.src}
+                    src={process.env.PUBLIC_URL + i.src}
                     alt="backstage"
                   />
                 </div>
