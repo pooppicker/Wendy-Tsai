@@ -8,6 +8,8 @@ const Projects = () => {
   const [openMetaModal, setOpenMetaModal] = useState(false);
   const [openOtherModal, setOpenOtherModal] = useState(false);
   const [openBackstageModal, setOpenBackstageModal] = useState(false);
+  const [openWiselletModal, setOpenWiselletModal] = useState(false);
+  const [openOrderModal, setOpenOrderModal] = useState(false);
   const [selectedModal, setSelectedModal] = useState("");
   return (
     <section id="projects" className={styles.projects}>
@@ -17,6 +19,121 @@ const Projects = () => {
           <span className={styles.headingSub}>{t("projects.subTitle")}</span>
         </h2>
         <div className={styles.projectsContent}>
+          {/* ORDER */}
+          <div className={styles.projectsRow}>
+            <div className={styles.projectsRowImg}>
+              <img
+                className={styles.mobileImg}
+                src={process.env.PUBLIC_URL + "/images/order_home.png"}
+                alt="order"
+              />
+            </div>
+            <div className={styles.projectsRowContent}>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.2esim")}
+              </h3>
+              <p
+                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
+                className={styles.projectsRowContentDesc}
+              ></p>
+              <Button
+                width="150px"
+                height="50px"
+                size="1.6rem"
+                text={t("button.viewMore")}
+                onClick={() => {
+                  setOpenOrderModal(true);
+                  setSelectedModal("order");
+                }}
+              />
+            </div>
+          </div>
+          {/* ORDER BACK */}
+          <div className={styles.projectsRow}>
+            <div className={styles.projectsRowImg}>
+              <img
+                className={styles.desktopImg}
+                src={process.env.PUBLIC_URL + "/images/order_back.png"}
+                alt="order"
+              />
+            </div>
+            <div className={styles.projectsRowContent}>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.2esim")}
+              </h3>
+              <p
+                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
+                className={styles.projectsRowContentDesc}
+              ></p>
+              <Button
+                width="150px"
+                height="50px"
+                size="1.6rem"
+                text={t("button.viewMore")}
+                onClick={() => {
+                  setOpenOrderModal(true);
+                  setSelectedModal("order");
+                }}
+              />
+            </div>
+          </div>
+          {/* 2esim */}
+          <div className={styles.projectsRow}>
+            <div className={styles.projectsRowImg}>
+              <img
+                className={styles.desktopImg}
+                src={process.env.PUBLIC_URL + "/images/2esim_home.png"}
+                alt="2esim"
+              />
+            </div>
+            <div className={styles.projectsRowContent}>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.2esim")}
+              </h3>
+              <p
+                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
+                className={styles.projectsRowContentDesc}
+              ></p>
+              <Button
+                width="150px"
+                height="50px"
+                size="1.6rem"
+                text={t("button.viewMore")}
+                onClick={() => {
+                  window.open("https://www.2esim.net");
+                }}
+              />
+            </div>
+          </div>
+          {/* WISELLET */}
+          <div className={styles.projectsRow}>
+            <div className={styles.projectsRowImg}>
+              <img
+                className={styles.mobileImg}
+                src={process.env.PUBLIC_URL + "/images/wisellet_home.jpg"}
+                alt="wisellet"
+              />
+            </div>
+            <div className={styles.projectsRowContent}>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.wisellet")}
+              </h3>
+              <p className={styles.projectsRowContentDesc}>
+                {t("projects.wiselletDesc")}
+              </p>
+              <Button
+                width="150px"
+                height="50px"
+                size="1.6rem"
+                text={t("button.viewMore")}
+                onClick={() => {
+                  setOpenWiselletModal(true);
+                  setSelectedModal("wisellet");
+                }}
+              />
+            </div>
+          </div>
+          {/* META */}
           <div className={styles.projectsRow}>
             <div className={styles.projectsRowImg}>
               <img
@@ -36,7 +153,7 @@ const Projects = () => {
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text={t('button.viewMore')}
+                text={t("button.viewMore")}
                 onClick={() => {
                   setOpenMetaModal(true);
                   setSelectedModal("meta");
@@ -44,6 +161,7 @@ const Projects = () => {
               />
             </div>
           </div>
+          {/* BLOCKCHAIN */}
           <div className={styles.projectsRow}>
             <div className={styles.projectsRowImg}>
               <img
@@ -53,15 +171,17 @@ const Projects = () => {
               />
             </div>
             <div className={styles.projectsRowContent}>
-              <h3 className={styles.projectsRowContentTitle}>{t('projects.otherGames')}</h3>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.otherGames")}
+              </h3>
               <p className={styles.projectsRowContentDesc}>
-                {t('projects.otherGamesDesc')}
+                {t("projects.otherGamesDesc")}
               </p>
               <Button
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text={t('button.viewMore')}
+                text={t("button.viewMore")}
                 onClick={() => {
                   setOpenOtherModal(true);
                   setSelectedModal("other");
@@ -69,6 +189,7 @@ const Projects = () => {
               />
             </div>
           </div>
+          {/* META-BACKSTAGE */}
           <div className={styles.projectsRow}>
             <div className={styles.projectsRowImg}>
               <img
@@ -78,7 +199,9 @@ const Projects = () => {
               />
             </div>
             <div className={styles.projectsRowContent}>
-              <h3 className={styles.projectsRowContentTitle}>{t('projects.backstage')}</h3>
+              <h3 className={styles.projectsRowContentTitle}>
+                {t("projects.backstage")}
+              </h3>
               <p className={styles.projectsRowContentDesc}>
                 {t("projects.backstageDesc")}
               </p>
@@ -86,7 +209,7 @@ const Projects = () => {
                 width="150px"
                 height="50px"
                 size="1.6rem"
-                text={t('button.viewMore')}
+                text={t("button.viewMore")}
                 onClick={() => {
                   setOpenBackstageModal(true);
                   setSelectedModal("backStage");
@@ -97,7 +220,7 @@ const Projects = () => {
         </div>
       </div>
       <ProjectModal
-        title={t('modal.scroll')}
+        title={t("modal.scroll")}
         open={
           openMetaModal
             ? openMetaModal
@@ -105,12 +228,18 @@ const Projects = () => {
             ? openOtherModal
             : openBackstageModal
             ? openBackstageModal
+            : openWiselletModal
+            ? openWiselletModal
+            : openOrderModal
+            ? openOrderModal
             : false
         }
         onClose={() => {
           setOpenMetaModal(false);
           setOpenOtherModal(false);
           setOpenBackstageModal(false);
+          setOpenWiselletModal(false);
+          setOpenOrderModal(false);
         }}
         selectedModal={selectedModal}
       />

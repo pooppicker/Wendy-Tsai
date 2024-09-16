@@ -45,6 +45,21 @@ const About = () => {
       skill: "Material UI",
     },
   ];
+
+  let x = 20
+
+  function outer() {
+    let x = 10;
+  
+    function inner() {
+      console.log(x);
+    }
+  
+    return inner;
+  }
+const fn = outer();
+fn()
+
   return (
     <>
       <section id="about" className={styles.about}>

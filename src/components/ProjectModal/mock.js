@@ -1,4 +1,35 @@
 export const imageSrc = {
+  order: [
+    {
+      src: "/images/order/order1.png",
+    },
+    {
+      src: "/images/order/order2.png",
+    },
+    {
+      src: "/images/order/order3.png",
+    },
+  ],
+  wisellet: [
+    {
+      src: "/images/wisellet/wisellet1.png",
+    },
+    {
+      src: "/images/wisellet/wisellet2.png",
+    },
+    {
+      src: "/images/wisellet/wisellet3.png",
+    },
+    {
+      src: "/images/wisellet/wisellet4.png",
+    },
+    {
+      src: "/images/wisellet/wisellet5.png",
+    },
+    {
+      src: "/images/wisellet/wisellet6.png",
+    },
+  ],
   meta: [
     {
       src: "/images/meta/meta-1.png",
