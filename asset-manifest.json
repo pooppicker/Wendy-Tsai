@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/wendy-tsai/static/css/main.40dc36f3.css",
-    "main.js": "/wendy-tsai/static/js/main.b0c2481b.js",
+    "main.js": "/wendy-tsai/static/js/main.e4fe600c.js",
     "static/js/787.376020e4.chunk.js": "/wendy-tsai/static/js/787.376020e4.chunk.js",
     "static/media/common-bg.svg": "/wendy-tsai/static/media/common-bg.9878fdbb0d963009b072.svg",
     "index.html": "/wendy-tsai/index.html",
     "main.40dc36f3.css.map": "/wendy-tsai/static/css/main.40dc36f3.css.map",
-    "main.b0c2481b.js.map": "/wendy-tsai/static/js/main.b0c2481b.js.map",
+    "main.e4fe600c.js.map": "/wendy-tsai/static/js/main.e4fe600c.js.map",
     "787.376020e4.chunk.js.map": "/wendy-tsai/static/js/787.376020e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40dc36f3.css",
-    "static/js/main.b0c2481b.js"
+    "static/js/main.e4fe600c.js"
   ]
 }
