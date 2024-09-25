@@ -15,7 +15,7 @@ const Contact = () => {
           <div className={styles.boxContent}>
             <div className={styles.boxContentText}>
               <span className={styles.boxContentTextLabel}>Mobile: </span>{" "}
-              090-336-1504
+              0903-361-504
             </div>
             <div className={styles.boxContentText}>
               <span className={styles.boxContentTextLabel}>E-mail: </span>{" "}
