@@ -21,6 +21,9 @@ const About = () => {
       skill: "React",
     },
     {
+      skill: "React Native",
+    },
+    {
       skill: "Vue",
     },
     {
@@ -46,19 +49,19 @@ const About = () => {
     },
   ];
 
-  let x = 20
+  let x = 20;
 
   function outer() {
     let x = 10;
-  
+
     function inner() {
       console.log(x);
     }
-  
+
     return inner;
   }
-const fn = outer();
-fn()
+  const fn = outer();
+  fn();
 
   return (
     <>
@@ -74,14 +77,17 @@ fn()
                 {t("about.contentTitle")}
               </h3>
               <div className={styles.aboutContentDetail}>
-                <p className={styles.aboutContentDetailText} dangerouslySetInnerHTML={{__html: t("about.content1")}}> 
-      
-                </p>
-                <p className={styles.aboutContentDetailText} dangerouslySetInnerHTML={{__html: t("about.content2")}}>
-                </p>
+                <p
+                  className={styles.aboutContentDetailText}
+                  dangerouslySetInnerHTML={{ __html: t("about.content1") }}
+                ></p>
+                <p
+                  className={styles.aboutContentDetailText}
+                  dangerouslySetInnerHTML={{ __html: t("about.content2") }}
+                ></p>
               </div>
               <Button
-                text={t('nav.contact')}
+                text={t("nav.contact")}
                 width="125px"
                 height="45px"
                 size="1.6rem"

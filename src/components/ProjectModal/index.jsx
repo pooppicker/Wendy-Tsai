@@ -85,7 +85,11 @@ const ProjectModal = ({ open, onClose, title, selectedModal }) => {
 
   return (
     <Modal
-      width={selectedModal === "backStage" ? 1000 : 500}
+      width={
+        selectedModal === "backStage" || selectedModal === "orderBack"
+          ? 1000
+          : 500
+      }
       title={title}
       centered
       open={open}

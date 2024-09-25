@@ -10,6 +10,7 @@ const Projects = () => {
   const [openBackstageModal, setOpenBackstageModal] = useState(false);
   const [openWiselletModal, setOpenWiselletModal] = useState(false);
   const [openOrderModal, setOpenOrderModal] = useState(false);
+  const [openOrderBackModal, setOpenOrderBackModal] = useState(false);
   const [selectedModal, setSelectedModal] = useState("");
   return (
     <section id="projects" className={styles.projects}>
@@ -30,12 +31,11 @@ const Projects = () => {
             </div>
             <div className={styles.projectsRowContent}>
               <h3 className={styles.projectsRowContentTitle}>
-                {t("projects.2esim")}
+                {t("projects.order")}
               </h3>
-              <p
-                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
-                className={styles.projectsRowContentDesc}
-              ></p>
+              <p className={styles.projectsRowContentDesc}>
+                {t("projects.orderDesc")}
+              </p>
               <Button
                 width="150px"
                 height="50px"
@@ -59,20 +59,19 @@ const Projects = () => {
             </div>
             <div className={styles.projectsRowContent}>
               <h3 className={styles.projectsRowContentTitle}>
-                {t("projects.2esim")}
+                {t("projects.orderBack")}
               </h3>
-              <p
-                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
-                className={styles.projectsRowContentDesc}
-              ></p>
+              <p className={styles.projectsRowContentDesc}>
+                {t("projects.orderBackDesc")}
+              </p>
               <Button
                 width="150px"
                 height="50px"
                 size="1.6rem"
                 text={t("button.viewMore")}
                 onClick={() => {
-                  setOpenOrderModal(true);
-                  setSelectedModal("order");
+                  setOpenOrderBackModal(true);
+                  setSelectedModal("orderBack");
                 }}
               />
             </div>
@@ -90,10 +89,9 @@ const Projects = () => {
               <h3 className={styles.projectsRowContentTitle}>
                 {t("projects.2esim")}
               </h3>
-              <p
-                dangerouslySetInnerHTML={{ __html: t("projects.2esimDesc") }}
-                className={styles.projectsRowContentDesc}
-              ></p>
+              <p className={styles.projectsRowContentDesc}>
+                {t("projects.2esimDesc")}
+              </p>
               <Button
                 width="150px"
                 height="50px"
@@ -232,6 +230,8 @@ const Projects = () => {
             ? openWiselletModal
             : openOrderModal
             ? openOrderModal
+            : openOrderBackModal
+            ? openOrderBackModal
             : false
         }
         onClose={() => {
@@ -240,6 +240,7 @@ const Projects = () => {
           setOpenBackstageModal(false);
           setOpenWiselletModal(false);
           setOpenOrderModal(false);
+          setOpenOrderBackModal(false);
         }}
         selectedModal={selectedModal}
       />
